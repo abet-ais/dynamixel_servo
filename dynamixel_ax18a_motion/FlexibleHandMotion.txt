@@ -1,0 +1,21 @@
+##########################################################################
+B4研究題目　穴部を有する小物体のばら積みピッキングに向けたフレキシブルハンドの開発
+
+目的：フレキシブルハンドを動作させるための手順
+
+著者　　阿部
+作成日　2018/12/5
+##########################################################################
+
+以下はサーボの接続と関節モードの指令なのでこれを実行してから以下を進める．
+1. roslaunch my_dynamixel_tutorial controller_manager.launch
+2. roslaunch my_dynamixel_tutorial start_tilt_controller.launch
+
+ーーーーーーーーーーーーー
+編集日 2019 1 18
+フレキシブルハンドを　”入力：対象物体直径　出力：モータの回転角度”　で動作させる手順
+1. rosrun dynamixel_ax18a_motion flexible_hand_motion.py
+2. rosrun dynamixel_ax18a_motion send_hole_diameter.py (num)
+   ※(num)に対象物体の穴の直径[mm](float)を入れる
+
+ーーーーーーーーーーーーー
